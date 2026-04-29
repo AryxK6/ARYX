@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} — Digital Growth Studio{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"/>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}"/>
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+  <meta property="og:image" content="{{ site.url }}/assets/images/og-image.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"/>
+  <meta name="twitter:image" content="{{ site.url }}/assets/images/og-image.png"/>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}"/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"/>
+
+  <!-- GSAP (defer so DOMContentLoaded fires after) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+  <!-- Aurora Background -->
+  <div class="aurora">
+    <div class="aurora-orb orb1"></div>
+    <div class="aurora-orb orb2"></div>
+    <div class="aurora-orb orb3"></div>
+    <div class="aurora-orb orb4"></div>
+  </div>
+
+  <!-- Grain -->
+  <div class="grain"></div>
+
+  <!-- Cursor -->
+  <div id="cur"></div>
+  <div id="cur-ring"></div>
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="ld-label">// Initializing</div>
+    <div class="ld-name">ARYX<span>.</span></div>
+    <div class="ld-bar-wrap"><div class="ld-bar" id="lbar"></div></div>
+    <div class="ld-pct" id="lpct">0%</div>
+  </div>
+
+  <!-- Header / Nav -->
+  {% include header.html %}
+
+  <!-- Page Content -->
+  {{ content }}
+
+  <!-- Footer -->
+  {% include footer.html %}
+
+  <!-- Main JS -->
+  <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+
+</body>
+</html>
