@@ -1,0 +1,50 @@
+# ─────────────────────────────────────────
+# ARYX Corporation — Jekyll Config
+# ─────────────────────────────────────────
+title: "ARYX Corporation"
+description: "Digital growth studio. Web design, SEO, content, and marketing that compounds over time."
+url: "https://aryx-corp.github.io"
+baseurl: ""
+
+author:
+  name: "ARYX K."
+  email: "aryx.k6@gmail.com"
+
+# Build
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Exclude from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO defaults
+twitter:
+  username: aryxcorp
+og_image: /assets/images/og-image.png
+
+social:
+  linkedin: "https://www.linkedin.com/in/aryx-k-847901406"
+  blog: "https://www.aryxguide.site"
+  email: "aryx.k6@gmail.com"
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      image: /assets/images/og-image.png
