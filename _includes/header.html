@@ -1,0 +1,41 @@
+<!-- NAV -->
+<nav id="nav">
+  <div style="display:flex;align-items:center">
+    <a href="{{ '/' | relative_url }}" class="nav-logo">
+      ARYX<div class="nav-logo-dot"></div>
+    </a>
+    <span class="nav-logo-sub">Corporation</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">Studio</a></li>
+    <li><a href="#insights">Insights</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener"
+       style="display:inline-flex;align-items:center;padding:8px;border-radius:6px;border:1px solid var(--gborder2);color:var(--ink3);transition:color .2s,border-color .2s,background .2s"
+       aria-label="LinkedIn"
+       onmouseenter="this.style.color='var(--ink)';this.style.borderColor='rgba(255,255,255,.2)';this.style.background='var(--glass)'"
+       onmouseleave="this.style.color='';this.style.borderColor='';this.style.background=''">
+      <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+    </a>
+    <a href="#contact" class="nbtn nbtn-ghost">Contact</a>
+    <a href="mailto:{{ site.author.email }}" class="nbtn nbtn-amber">
+      Start Here
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+  <button class="ham" id="ham" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mob-nav" id="mob-nav">
+  <a href="#services">Services</a>
+  <a href="#about">Studio</a>
+  <a href="#insights">Insights</a>
+  <a href="#faq">FAQ</a>
+  <a href="mailto:{{ site.author.email }}" class="nbtn nbtn-amber">Start Here &rarr;</a>
+</div>
