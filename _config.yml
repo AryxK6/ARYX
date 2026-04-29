@@ -3,8 +3,8 @@
 # ─────────────────────────────────────────
 title: "ARYX Corporation"
 description: "Digital growth studio. Web design, SEO, content, and marketing that compounds over time."
-url: "https://aryxk6.github.io/ARYX"
-baseurl: ""
+url: "https://aryxk6.github.io"
+baseurl: "/ARYX"
 
 author:
   name: "ARYX K."
